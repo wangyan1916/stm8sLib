@@ -1,8 +1,8 @@
 "C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.3\stm8\bin\stm8proc.dll" 
 
-"C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.3\stm8\bin\stm8sim.dll" 
+"C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.3\stm8\bin\stm8stlink.dll" 
 
-"D:\Files\stm8\stm8s\lib\Debug\Exe\lib.out" 
+"C:\Files\stm8\stm8sLib\Debug\Exe\lib.out" 
 
 --plugin="C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.3\stm8\bin\stm8bat.dll" 
 

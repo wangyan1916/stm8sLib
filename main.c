@@ -1,44 +1,16 @@
-/**
-  ******************************************************************************
-  * @file    GPIO_Toggle\main.c
-  * @author  MCD Application Team
-  * @version V2.0.4
-  * @date    26-April-2018
-  * @brief   This file contains the main function for GPIO Toggle example.
-  ******************************************************************************
-  * @attention
-  *
-  * <h2><center>&copy; COPYRIGHT 2014 STMicroelectronics</center></h2>
-  *
-  * Licensed under MCD-ST Liberty SW License Agreement V2, (the "License");
-  * You may not use this file except in compliance with the License.
-  * You may obtain a copy of the License at:
-  *
-  *        http://www.st.com/software_license_agreement_liberty_v2
-  *
-  * Unless required by applicable law or agreed to in writing, software 
-  * distributed under the License is distributed on an "AS IS" BASIS, 
-  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-  * See the License for the specific language governing permissions and
-  * limitations under the License.
-  *
-  ******************************************************************************
-  */ 
 
 /* Includes ------------------------------------------------------------------*/
 #include "stm8s.h"
-
-/**
-  * @addtogroup GPIO_Toggle
-  * @{
-  */
 
 /* Private typedef -----------------------------------------------------------*/
 /* Private define ------------------------------------------------------------*/
 /* Evalboard I/Os configuration */
 
 #define LED_GPIO_PORT  (GPIOB)
-#define LED_GPIO_PINS  (GPIO_PIN_3 | GPIO_PIN_2 | GPIO_PIN_1 | GPIO_PIN_0)
+#define LED_GPIO_PINS  (GPIO_PIN_5)
+#define KEY_GPIO_PORT  (GPIOC)
+#define KEY_GPIO_PIN   (GPIO_PIN_3)
+
 
 /* Private macro -------------------------------------------------------------*/
 /* Private variables ---------------------------------------------------------*/
@@ -57,14 +29,38 @@ void main(void)
 {
 
   /* Initialize I/Os in Output Mode */
-  GPIO_Init(LED_GPIO_PORT, (GPIO_Pin_TypeDef)LED_GPIO_PINS, GPIO_MODE_OUT_PP_LOW_FAST);
-
-  while (1)
+  GPIO_Init(LED_GPIO_PORT, LED_GPIO_PINS, GPIO_MODE_OUT_PP_HIGH_FAST);
+  GPIO_Init(KEY_GPIO_PORT, KEY_GPIO_PIN, GPIO_MODE_IN_PU_IT);
+  EXTI_DeInit();
+  EXTI_SetExtIntSensitivity(EXTI_PORT_GPIOC, EXTI_SENSITIVITY_FALL_ONLY);
+  enableInterrupts();
+  while(1)
   {
-    /* Toggles LEDs */
-    GPIO_WriteReverse(LED_GPIO_PORT, (GPIO_Pin_TypeDef)LED_GPIO_PINS);
-    Delay(0xFFFF);
+    
   }
+  
+  
+//  while (1)
+//  {
+//    
+//      if(GPIO_ReadInputPin(KEY_GPIO_PORT, KEY_GPIO_PIN) == 0)
+//    {
+//      Delay(100);
+//      if(GPIO_ReadInputPin(KEY_GPIO_PORT, KEY_GPIO_PIN) == 0)
+//      {
+//        GPIO_WriteHigh(LED_GPIO_PORT, LED_GPIO_PINS);
+//      }
+//    }
+//    else
+//    {
+//      Delay(100);
+//      if(GPIO_ReadInputPin(KEY_GPIO_PORT, KEY_GPIO_PIN) != 1)
+//      {
+//        GPIO_WriteLow(LED_GPIO_PORT, LED_GPIO_PINS);
+//      }
+//    }
+//    
+//  }
 
 }
 
@@ -102,10 +98,6 @@ void assert_failed(uint8_t* file, uint32_t line)
   }
 }
 #endif
-
-/**
-  * @}
-  */
 
 
 /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/

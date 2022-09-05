@@ -259,6 +259,9 @@
                     <state>D:\Files\stm8\stm8s\lib</state>
                     <state>D:\Files\stm8\stm8s\lib\STM8S_StdPeriph_Driver\inc</state>
                     <state>D:\Files\stm8\stm8s\lib\STM8S_StdPeriph_Driver\src</state>
+                    <state>C:\Files\stm8\stm8sLib\STM8S_StdPeriph_Driver\inc</state>
+                    <state>C:\Files\stm8\stm8sLib\STM8S_StdPeriph_Driver\src</state>
+                    <state>C:\Files\stm8\stm8sLib</state>
                 </option>
                 <option>
                     <name>CCStdIncCheck</name>
@@ -1640,7 +1643,7 @@
     <group>
         <name>STM8S_StdPeriph_Driver</name>
         <file>
-            <name>$PROJ_DIR$\STM8S_StdPeriph_Driver\inc\stm8s.h</name>
+            <name>$PROJ_DIR$\STM8S_StdPeriph_Driver\src\stm8s_exti.c</name>
         </file>
         <file>
             <name>$PROJ_DIR$\STM8S_StdPeriph_Driver\src\stm8s_gpio.c</name>

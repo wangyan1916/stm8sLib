@@ -135,8 +135,21 @@ INTERRUPT_HANDLER(EXTI_PORTC_IRQHandler, 5)
   /* In order to detect unexpected events during development,
      it is recommended to set a breakpoint on the following instruction.
   */
+  // °´¼üÏÂ½µÑØÅÐ¶Ï
+  BitStatus bit_status;
+  char i = 0;
+  bit_status = GPIO_ReadInputPin(KEY_GPIO_PORT, KEY_GPIO_PIN);
+  if (bit_status == RESET) 
+  {
+    i = 100;
+    while(i--);
+    bit_status = GPIO_ReadInputPin(KEY_GPIO_PORT, KEY_GPIO_PIN);
+    if (bit_status == RESET)
+    {
+      GPIO_WriteLow(LED_GPIO_PORT, LED_GPIO_PINS);
+    }
+  }
 }
-
 /**
   * @brief  External Interrupt PORTD Interrupt routine
   * @param  None

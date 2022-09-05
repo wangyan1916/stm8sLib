@@ -20,10 +20,11 @@ rule browsedata
 
 
 #Build steps
+build stm8s_exti.pbi : index stm8s_exti.xcl
 build stm8s_gpio.pbi : index stm8s_gpio.xcl
 build main.pbi : index main.xcl
 build stm8s_it.pbi : index stm8s_it.xcl
-build lib.pbd : link stm8s_gpio.pbi main.pbi stm8s_it.pbi
+build lib.pbd : link stm8s_exti.pbi stm8s_gpio.pbi main.pbi stm8s_it.pbi
 build lib.pbw : browsedata lib.pbd
 
 

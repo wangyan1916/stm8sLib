@@ -1,6 +1,6 @@
-stm8s_gpio.pbi: \
-  C:\Files\stm8\stm8sLib\STM8S_StdPeriph_Driver\src\stm8s_gpio.c \
-  C:\Files\stm8\stm8sLib\STM8S_StdPeriph_Driver\inc\stm8s_gpio.h \
+stm8s_exti.pbi: \
+  C:\Files\stm8\stm8sLib\STM8S_StdPeriph_Driver\src\stm8s_exti.c \
+  C:\Files\stm8\stm8sLib\STM8S_StdPeriph_Driver\inc\stm8s_exti.h \
   C:\Files\stm8\stm8sLib\STM8S_StdPeriph_Driver\inc/stm8s.h \
   C:\Files\stm8\stm8sLib\stm8s_conf.h \
   C:\Files\stm8\stm8sLib\STM8S_StdPeriph_Driver\inc\stm8s.h \
@@ -8,8 +8,8 @@ stm8s_gpio.pbi: \
   C:\Files\stm8\stm8sLib\STM8S_StdPeriph_Driver\inc\stm8s_awu.h \
   C:\Files\stm8\stm8sLib\STM8S_StdPeriph_Driver\inc\stm8s_beep.h \
   C:\Files\stm8\stm8sLib\STM8S_StdPeriph_Driver\inc\stm8s_clk.h \
-  C:\Files\stm8\stm8sLib\STM8S_StdPeriph_Driver\inc\stm8s_exti.h \
   C:\Files\stm8\stm8sLib\STM8S_StdPeriph_Driver\inc\stm8s_flash.h \
+  C:\Files\stm8\stm8sLib\STM8S_StdPeriph_Driver\inc\stm8s_gpio.h \
   C:\Files\stm8\stm8sLib\STM8S_StdPeriph_Driver\inc\stm8s_i2c.h \
   C:\Files\stm8\stm8sLib\STM8S_StdPeriph_Driver\inc\stm8s_itc.h \
   C:\Files\stm8\stm8sLib\STM8S_StdPeriph_Driver\inc\stm8s_iwdg.h \

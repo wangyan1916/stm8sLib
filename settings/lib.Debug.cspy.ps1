@@ -23,9 +23,9 @@
 
 if ($debugfile -eq "")
 {
-& "C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.3\common\bin\cspybat" -f "D:\Files\stm8\stm8s\lib\settings\lib.Debug.general.xcl" --backend -f "D:\Files\stm8\stm8s\lib\settings\lib.Debug.driver.xcl" 
+& "C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.3\common\bin\cspybat" -f "C:\Files\stm8\stm8sLib\settings\lib.Debug.general.xcl" --backend -f "C:\Files\stm8\stm8sLib\settings\lib.Debug.driver.xcl" 
 }
 else
 {
-& "C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.3\common\bin\cspybat" -f "D:\Files\stm8\stm8s\lib\settings\lib.Debug.general.xcl" --debug_file=$debugfile --backend -f "D:\Files\stm8\stm8s\lib\settings\lib.Debug.driver.xcl" 
+& "C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.3\common\bin\cspybat" -f "C:\Files\stm8\stm8sLib\settings\lib.Debug.general.xcl" --debug_file=$debugfile --backend -f "C:\Files\stm8\stm8sLib\settings\lib.Debug.driver.xcl" 
 }
